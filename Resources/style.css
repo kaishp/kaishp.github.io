@@ -1,0 +1,145 @@
+/*
+    Author: Kaish
+    File Name: style.css
+    Version: 2020-05-01
+*/
+
+body {
+    background-color: black;
+}
+
+.video_playback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0.2;
+    z-index: 0;
+    filter: invert(100%);
+}
+
+.color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent url(img/pattern.png) repeat top left;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    filter: invert(100%);
+}
+
+
+.data_container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.name {
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Righteous', cursive;
+    opacity: 0.9;
+    padding: 20px;
+    margin: 15px;
+    z-index: 1;
+    filter: invert(100%);
+    transition: 0.3s;
+    transition-delay: 0.3s;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.name:hover {
+    opacity: 1;
+    text-shadow: 4px 4px 5px cyan;
+}
+
+
+/* Buttons */
+
+.button_container {
+}
+
+/* Github Button */
+
+.g_button {
+    height: 80px;
+    width: 80px;
+    background: transparent url(img/github.png);
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 25px;
+    opacity: 0.9;
+    border: none;
+    margin: 40px 70px 0px 0px;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.g_button:hover {
+    background-image: url(img/link.png);
+    opacity: 1;
+    filter: drop-shadow(4px 4px 5px cyan);
+}
+
+
+/* LinkedIn Button */
+
+.l_button {
+    height: 80px;
+    width: 80px;
+    background: transparent url(img/linkedin.png);
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 25px;
+    opacity: 0.9;
+    border: none;
+    margin: 40px 70px 0px 0px;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+
+}
+
+.l_button:hover {
+    background-image: url(img/link.png);
+    opacity: 1;
+    filter: drop-shadow(4px 4px 5px cyan);
+}
+
+
+/* Resume Button */
+
+.r_button {
+    height: 80px;
+    width: 80px;
+    background: transparent url(img/document.png);
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 25px;
+    opacity: 0.9;
+    border: none;
+    margin: 40px 0px 0px 0px;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+
+}
+
+.r_button:hover {
+    background-image: url(img/download.png);
+    opacity: 1;
+    filter: drop-shadow(4px 4px 5px yellow);
+}
