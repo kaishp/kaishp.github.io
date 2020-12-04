@@ -1,0 +1,79 @@
+---------
+Languages
+---------
+1. ARM Assembly
+2. C/C++
+3. Dart
+4. HTML
+5. Java
+6. Modern JavaScript
+7. Python
+8. R
+9. SQL
+10. VBA
+
+---------
+Libraries
+---------
+1. C/C++:
+	~> <pthread.h>
+	~> <sys/*.h>
+	~> <unistd.h>
+
+2. Java:
+	~> JUnit
+	~> Java AWT
+	~> Java Swing
+
+3. Python:
+	~> Numpy
+	~> Pandas
+	~> Selenium
+
+----------------
+Technical Skills
+----------------
+1. Algorithm Design and Analysis
+2. Artificial Intelligence (Problem solving and searching)
+3. Automation with Python and VBA
+4. Basic Circuit Design
+5. Command line (Bash, CMD)
+6. Data Structures (Hash Tables, Graphs, Linked Structures)
+7. Event-Driven Programming
+8. Machine Learning (Classification and Clustering)
+9. Mobile Application Development
+10. Objected-Oriented Programming
+11. Operating System Architecture
+12. Software Engineering Fundamentals
+
+-----
+Tools
+-----
+1. Adobe Creative Suite
+2. Altera Quartus II
+3. Android Studio
+4. Firebase
+5. Flutter
+6. Git
+7. LATEX
+8. Maple
+9. Microsoft Office Suite
+10. MySQL
+11. R Studio
+12. Visual Studio Code
+
+
+----------
+Experience
+----------
+1. Motoinsight
+2. WLU
+
+
+--------
+Projects
+--------
+1. Calculus-Basic
+2. Code Runner
+3. IntelliSpyder
+4. Jaldi.io Project

@@ -1,63 +1,515 @@
 <!--
     Author: Kaish
     File Name: index.html
-    Version: 2020-05-01
+    Version: 2020-12-04
 -->
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167611368-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <head>
 
-        gtag('config', 'UA-167611368-1');
-    </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167611368-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="Resources/style.css">
-    <link rel="icon" type="image/png" href="Resources/img/RANDOMBEEP.png" />
-    <title>Kaish Panjwani</title>
-</head>
-<body>
-        <!-- Video Background -->
-    <div class="video_playback">
-        <div class="color-overlay"></div>
-        <video autoplay loop muted>
-            <source src="Resources/img/videoplayback.webm" type="video/webm">
-        </video>
-    </div>
+            gtag('config', 'UA-167611368-1');
+        </script>
+
+        <!-- Links -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Resources/style.css">
+        <link rel="icon" type="image/png" href="Resources/img/RANDOMBEEP v2.0 (Squared).png" />
+        <script type="text/javascript" src="Resources/scripts.js"></script>
+        
+        <title>Kaish Panjwani</title>
+
+    </head>
+
+    <body oncontextmenu="return false;">
+
+        <!-- Scroll Up Button -->
+        <div class="scroll_up_container">
+            <button onclick="topFunction()" id="scroll-up"></button>
+        </div>  
+
+
+        <!-- Header -->
+        <header id="home">
+
+            <!-- Video Background -->
+            <div class="video_playback">
+                <div class="color_overlay"></div>
+                <video autoplay loop muted alt="Oops... Video Not Loaded">
+                    <source src="Resources/img/videoplayback.webm" type="video/webm">
+                </video>
+            </div>
+
+
+            <!-- Navigation Bar -->
+            <nav>
+                <ul class="main_navigation">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+
+
+            <!-- Header Data Container -->
+            <div class="header_container">
+                <div class="name">KAISH PANJWANI</div>
+
+                <div class="header_button_container">
+                    <button class="g_button_head" onclick="window.open('https://github.com/kaishp','_blank')" title="GitHub"></button>
+                    <button class="i_button_head" onclick="window.open('uc.html','_self')" title="I-Button"></button>
+                    <button class="l_button_head" onclick="window.open('https://www.linkedin.com/in/kaishp','_blank')" title="LinkedIn"></button>
+                </div>
+
+                <div>
+                    <button class="r_button_head" onclick="window.open('Resources/img/Resume.pdf','_blank')">Download Resume</button>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- About Me Section -->
+        <section id="about-me" class="section_about_me">
+        
+            <div class="about_me_title">About Me</div>
+            <div class="about_me_container">
+                <div class="about_me_text">
+                    <h3>Hello There!</h3>
+                    <p>My name is <a href="https://www.linkedin.com/in/kaishp"><b>Kaish Panjwani</b></a>, I'm a third year <b><i>Computer Science (BSc Honors)</i></b> student at <a href="https://wlu.ca"><b>Wilfrid Laurier University</b></a>, currently interning as <b><i>Data and Automation Analyst</i></b> at <a href="https://www.motoinsight.com"><b>Motoinsight</b></a>.</p>
+                    <p>I am very keen on taking new challenges. My coursework has given me a foundation in different programming languages, data structures, algorithms, operating systems, artificial intelligence, and many more. I spend a substantial amount of time improving the quality of my work.</p>
+                </div>
+                <img src ="Resources/img/RANDOMBEEP v2.0 (Squared).png" class="img_me" alt="Me">
+            </div>
+            
+        </section>
+
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="section_skills">
+            <div class="skills_title">Skills</div>
+            <div class="skills_container">
+                <button class="tablink" onclick="openPage('languages', this, '#380000')" id="default-tab-open">Languages</button>
+                <!--<button class="tablink" onclick="openPage('libraries', this, '#a0740a')">Libraries</button>-->
+                <button class="tablink" onclick="openPage('technical-skills', this, '#000033')">Technical Skills</button>
+                <button class="tablink" onclick="openPage('tools', this, '#003300')">Tools</button>
+
+
+                <div id="languages" class="tabcontent">
+                    <div class="column">
+                        <div class="row">
+                            <div class="img_block">
+                                <img src ="Resources/img/arm.png" class="img_skills" alt="ARM Assembly">
+                                <h3>ASSEMBLY</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/c++.png" class="img_skills" alt="C/C++">
+                                <h3>C / C++</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/dart.png" class="img_skills" alt="Dart">
+                                <h3>DART</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/html5.png" class="img_skills" alt="HTML5">
+                                <h3>HTML 5</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/java.png" class="img_skills" alt="Java">
+                                <h3>JAVA</h3>
+                            </div>
+                        </div>
+                        <div class="blank"></div>
+                        <div class="row">
+                            <div class="img_block">
+                                <img src ="Resources/img/javascript.png" class="img_skills" alt="JavaScript">
+                                <h3>JAVASCRIPT</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/python.png" class="img_skills" alt="Python">
+                                <h3>PYTHON</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/r.png" class="img_skills" alt="R">
+                                <h3>R</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/sql.png" class="img_skills" alt="SQL">
+                                <h3>SQL</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/vba.png" class="img_skills" alt="VBA">
+                                <h3>VBA</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div id="libraries" class="tabcontent">
+                    <h3>News</h3>
+                    <p>Some news this fine day!</p> 
+                </div>-->
+
+                <div id="technical-skills" class="tabcontent">
+                    <div class="column">
+                        <div class="row">
+                            <div class="img_block">
+                                <img src ="Resources/img/ada.png" class="img_skills" alt="Algorithm Design and Analysis">
+                                <h3>Algorithm Design and Analysis</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/ai.png" class="img_skills" alt="Artificial Intelligence">
+                                <h3>Artificial Intelligence</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/at.png" class="img_skills" alt="Automation with Python and VBA">
+                                <h3>Automation with Python and VBA</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/cd.png" class="img_skills" alt="Basic Circuit Design">
+                                <h3>Basic Circuit Design</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/cl.png" class="img_skills" alt="Command line">
+                                <h3>Command Line</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/ds.png" class="img_skills" alt="Data Structures">
+                                <h3>Data Structures</h3>
+                            </div>
+                        </div>
+
+                        <div class="blank"></div>
+
+                        <div class="row">
+                            <div class="img_block">
+                                <img src ="Resources/img/edp.png" class="img_skills" alt="Event-Driven Programming">
+                                <h3>Event-Driven Programming</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/ml.png" class="img_skills" alt="Machine Learning">
+                                <h3>Machine Learning</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/mad.png" class="img_skills" alt="Mobile Application Development">
+                                <h3>Mobile Application Development</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/oop.png" class="img_skills" alt="Objected-Oriented Programming">
+                                <h3>Objected-Oriented Programming</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/os.png" class="img_skills" alt="Operating System Architecture">
+                                <h3>Operating System Architecture</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/se.png" class="img_skills" alt="Software Engineering Fundamentals">
+                                <h3>Software Engineering Fundamentals</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tools" class="tabcontent">
+                    <div class="column">
+                        <div class="row">
+                            <div class="img_block">
+                                <img src ="Resources/img/cc.png" class="img_skills" alt="Adobe Creative Suite">
+                                <h3>ADOBE CREATIVE SUITE</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/quartus.png" class="img_skills" alt="Altera Quartus II">
+                                <h3>ALTERA QUARTUS II</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/as.png" class="img_skills" alt="Android Studio">
+                                <h3>ANDROID STUDIO</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/firebase.png" class="img_skills" alt="Firebase">
+                                <h3>FIREBASE</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/flutter.png" class="img_skills" alt="Flutter">
+                                <h3>FLUTTER</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/git.png" class="img_skills" alt="Git">
+                                <h3>GIT</h3>
+                            </div>
+                        </div>
+
+                        <div class="blank"></div>
+
+                        <div class="row">
+                            <div class="img_block">
+                                <img src ="Resources/img/latex.png" class="img_skills" alt="LATEX">
+                                <h3>LATEX</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/maple.png" class="img_skills" alt="Maple">
+                                <h3>MAPLE</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/mso.png" class="img_skills" alt="Microsoft Office Suite">
+                                <h3>MICROSOFT OFFICE SUITE</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/mysql.png" class="img_skills" alt="MySQL">
+                                <h3>MYSQL</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/rstudio.png" class="img_skills" alt="R Studio">
+                                <h3>R STUDIO</h3>
+                            </div>
+
+                            <div class="img_block">
+                                <img src ="Resources/img/vsc.png" class="img_skills" alt="Visual Studio Code">
+                                <h3>VS CODE</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>       
+
+            </div>
+
+
+            <script>
+                function openPage(pageName,elmnt,color) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+                    }
+                    document.getElementById(pageName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+                }
+
+                // Get the element with id="default-tab-open" and click on it
+                document.getElementById("default-tab-open").click();
+            </script>
+
+        </section>
+
+
+        <!-- Experience Section -->
+        <section id="experience" class="section_experience">
+        <div class="experience_title">Experience</div>
+        <div class="experience_container">
+
+
+            <div class="row">
+
+                <div class="exp_block">
+                    <img src ="Resources/img/motoinsight.png" class="img_experience" alt="Motoinsight">
+                    <h3>Data and Automation Analyst</h3>
+                    <h4>September 2020 - December 2020</h4>
+                    <p>Refactored, documented and increased performance of previously automated scripts by almost 75% and created a user-friendly GUI for them. Also automated several tasks for Sales Team to aid in finding leads. Most Scripts were written in Bash/Batch, VBA, and Python using Numpy, Pandas, Beautiful Soup, Tkinter, Selenium and PyTest.</p>
+                </div>
+
+                <div class="exp_block">
+                    <img src ="Resources/img/laurier.png" class="img_experience" alt="Wilfrid Laurier University">
+                    <h3>Assistive Technology Project Coordinator</h3>
+                    <h4>October 2019 - March 2020</h4>
+                    <p>Generated and Tested Accessibility of forms and texts using Adobe Acrobat Pro DC. This included: Content Tag, Logical Reading Order, Form Fields, Tab Order. Also, worked with Accessible Software like: Dragon Speech Recognition, Glean Notetaking, Kurzweil 3000. Setup Computers for SCCM Imaging, which were used for conducting tests through ALC.</p>
+                </div>
+
+            </div>
+        
+        </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="section_projects">
+        <div class="projects_title">Projects</div>
+        <div class="projects_container">
+            <div class="column">
+                <div class="row">
+
+                    <div class="proj_block">
+                        <div class="image_overlay"></div>
+                        <img src ="Resources/img/Calculus-Basic.png" class="img_project" alt="Calculus-Basic">
+                        <div class="overlay_content fade_in_top">
+                            <button class="run_code_button" onclick="window.open('uc.html','_blank')" disabled>Run Code</button>
+                            <button class="view_code_button" onclick="window.open('https://github.com/kaishp/Calculus-Basic','_blank')">View Code</button>
+                            <h3>Calculus-Basic</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="x_spacer"></div>
+
+                    <div class="proj_block">
+                        <div class="image_overlay"></div>
+                        <img src ="Resources/img/Code Runner.png" class="img_project" alt="Code Runner">
+                        <div class="overlay_content fade_in_top">
+                            <button class="run_code_button" onclick="window.open('uc.html','_blank')" disabled>Run Code</button>
+                            <button class="view_code_button" onclick="window.open('https://github.com/kaishp/Code_Runner','_blank')">View Code</button>
+                            <h3>Code Runner</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="y_spacer"></div>
+                <div class="row">
+
+                    <div class="proj_block">
+                        <div class="image_overlay"></div>
+                        <img src ="Resources/img/IntelliSpyder.png" class="img_project" alt="IntelliSpyder">
+                        <div class="overlay_content fade_in_top">
+                            <button class="run_code_button" onclick="window.open('uc.html','_blank')" disabled>Run Code</button>
+                            <button class="view_code_button" onclick="window.open('https://github.com/kaishp/IntelliSpyder','_blank')">View Code</button>
+                            <h3>IntelliSpyder</h3>
+                        </div>
+                    </div>
+
+                    <div class="x_spacer"></div>
+
+                    <div class="proj_block">
+                        <div class="image_overlay"></div>
+                        <img src ="Resources/img/Jaldi.io Project.png" class="img_project" alt="Jaldi.io Project">
+                        <div class="overlay_content fade_in_top">
+                            <button class="run_code_button" onclick="window.open('uc.html','_blank')" disabled>Run Code</button>
+                            <button class="view_code_button" onclick="window.open('https://github.com/sharan-rohit-raj/jaldiio','_blank')">View Code</button>
+                            <h3>Jaldi.io Project</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        
+        
+        
+        </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer">
+                <div class="footer_navigation">
+                    <a href="#home">Home</a>
+                    <a href="#about-me">About Me</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                </div>
+                
+                <div class="footer_button_container">
+                    <button class="g_button_foot" onclick="window.open('https://github.com/kaishp','_blank')"></button>
+                    <button class="i_button_foot" onclick="window.open('uc.html','_self')"></button>
+                    <button class="l_button_foot" onclick="window.open('https://www.linkedin.com/in/kaishp/','_blank')"></button>
+                </div>
+                
+                <br>
+                <div class="footer_name">Developed by <b>Kaish Panjwani</b> 👨‍💻</div>
+            </div>
+    
+        </footer>
+
+
+        <!-- Scroll Up Script -->
+        <script>
+        
+            //Get the button
+            var scrollUp = document.getElementById("scroll-up");
+
+            // When the user scrolls down 150px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+                    scrollUp.style.display = "block";
+                } else {
+                    scrollUp.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+
+    </body>
+</html>
 
 
 <!--
-    Guy 1: 'How can you tell the difference between HTML and HTML5?'
+888    d8P           d8b          888                                
+888   d8P            Y8P          888                                
+888  d8P                          888                                
+888d88K      8888b.  888 .d8888b  88888b.                            
+8888888b        "88b 888 88K      888 "88b                           
+888  Y88b   .d888888 888 "Y8888b. 888  888                           
+888   Y88b  888  888 888      X88 888  888                           
+888    Y88b "Y888888 888  88888P' 888  888                           
+                                                                     
+                                                                     
+                                                                     
+8888888b.                    d8b                                 d8b 
+888   Y88b                   Y8P                                 Y8P 
+888    888                                                           
+888   d88P 8888b.  88888b.  8888 888  888  888  8888b.  88888b.  888 
+8888888P"     "88b 888 "88b "888 888  888  888     "88b 888 "88b 888 
+888       .d888888 888  888  888 888  888  888 .d888888 888  888 888 
+888       888  888 888  888  888 Y88b 888 d88P 888  888 888  888 888 
+888       "Y888888 888  888  888  "Y8888888P"  "Y888888 888  888 888 
+                             888                                     
+                            d88P                                     
+                          888P"       
 
-    Guy 2: 'Open it in Internet Explorer'
 
-    Guy 1: 'Ok'
-
-    Guy 2: 'Did it work?'
-
-    Guy 1: 'No'
-
-    Guy 2: 'It's HTML5'
+Special Thanks to W3Schools to bring this project to life                               
 -->
-
-
-    <!-- Data Container -->
-    <div class="data_container">
-        <div class="name">KAISH PANJWANI</div>
-        <div class="button_container">
-            <button class="g_button" onclick="window.open('https://github.com/kaishp','_blank')"></button>
-            <button class="l_button" onclick="window.open('https://www.linkedin.com/in/kaishp/','_blank')"></button>
-            <button class="r_button" onclick="window.open('Resources/img/Resume.pdf','_blank')"></button>
-        </div>
-    </div>
-
-</body>
-</html>

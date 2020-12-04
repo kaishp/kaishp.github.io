@@ -1,26 +1,128 @@
 /*
     Author: Kaish
     File Name: style.css
-    Version: 2020-05-01
+    Version: 2020-12-04
 */
 
+html, 
 body {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll_up_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#scroll-up {
+    height: 30px;
+    width: 30px;
+    background: transparent url(img/ScrollUp-g.png);
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 100%;
+    border: none;
+    bottom: 50px;
+    display: none;
+    opacity: 0.2;
+    position: fixed;
+    transition: 0.7s;
+    z-index: 99;
+}
+
+
+#scroll-up:hover {
+    /* background-image: url(img/ScrollUp-c.png); */
+    /* filter: drop-shadow(0px 0px 20px purple); */
+    opacity: 0.7;
+}
+
+
+/*
+================================================================
+                        Main Navigation
+================================================================
+*/
+
+.main_navigation {
+    position: absolute;
+    float: left;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.main_navigation li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.main_navigation li a:link,
+.main_navigation li a:visited {
+    border-bottom: 2px solid transparent;
+    color: #fff;
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px;
+    text-decoration: none;
+    transition: border-bottom 0.3s;
+    -webkit-transition: border-bottom 0.3s;
+    
+}
+
+.main_navigation li a:hover,
+.main_navigation li a:active {
+    border-bottom: 5px solid maroon;
+}
+
+
+/*
+================================================================
+                            Header
+================================================================
+*/
+
+header {
     background-color: black;
+    /* -webkit-box-shadow: 0px 30px 135px 0px #646464;
+    box-shadow: 0px 30px 135px 0px #646464; */
+	-o-transition: all 0.7s ease-in 0s;
+    transition: all 0.7s ease-in 0s;
+    -webkit-transition: all 0.7s ease-in 0s;
+    
 }
 
 .video_playback {
-    position: absolute;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    opacity: 0.1;
     overflow: hidden;
-    opacity: 0.2;
-    z-index: 0;
     filter: invert(100%);
+    z-index: 0;
 }
 
-.color-overlay {
+.color_overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -32,15 +134,14 @@ body {
 }
 
 
-.data_container {
-    position: fixed;
-    width: 100%;
+.header_container {
+    /* position: absolute; */
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .name {
@@ -54,29 +155,29 @@ body {
     filter: invert(100%);
     transition: 0.3s;
     transition-delay: 0.3s;
-
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 .name:hover {
     opacity: 1;
-    text-shadow: 4px 4px 5px cyan;
+    text-shadow: 5px 5px 5px cyan;
 }
 
 
-/* Buttons */
 
-.button_container {
+/*
+----------------------------------------------------------------
+                        Header Buttons
+----------------------------------------------------------------
+*/
+
+.header_button_container {
+
 }
+
 
 /* Github Button */
 
-.g_button {
+.g_button_head {
     height: 80px;
     width: 80px;
     background: transparent url(img/github.png);
@@ -86,20 +187,44 @@ body {
     opacity: 0.9;
     border: none;
     margin: 40px 70px 0px 0px;
-    transition: 0.3s;
-    transition-delay: 0.3s;
+    transition: 0.7s;
+    /* transition-delay: 0.3s; */
 }
 
-.g_button:hover {
-    background-image: url(img/link.png);
+.g_button_head:hover {
+    background-image: url(img/github-c.png);
     opacity: 1;
-    filter: drop-shadow(4px 4px 5px cyan);
+    filter: drop-shadow(0px 0px 40px whitesmoke);
+}
+
+
+/* I Button */
+
+.i_button_head {
+    height: 80px;
+    width: 80px;
+    background: transparent url(img/idea.png);
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 25px;
+    opacity: 0.9;
+    border: none;
+    margin: 40px 70px 0px 0px;
+    transition: 0.7s;
+    /* transition-delay: 0.3s; */
+
+}
+
+.i_button_head:hover {
+    background-image: url(img/idea-c.png);
+    opacity: 1;
+    filter: drop-shadow(0px 0px 40px yellow);
 }
 
 
 /* LinkedIn Button */
 
-.l_button {
+.l_button_head {
     height: 80px;
     width: 80px;
     background: transparent url(img/linkedin.png);
@@ -108,38 +233,548 @@ body {
     border-radius: 25px;
     opacity: 0.9;
     border: none;
-    margin: 40px 70px 0px 0px;
-    transition: 0.3s;
-    transition-delay: 0.3s;
+    margin: 40px 0px 0px 0px;
+    transition: 0.7s;
+    /* transition-delay: 0.3s; */
 
 }
 
-.l_button:hover {
-    background-image: url(img/link.png);
+.l_button_head:hover {
+    background-image: url(img/linkedin-c.png);
     opacity: 1;
-    filter: drop-shadow(4px 4px 5px cyan);
+    filter: drop-shadow(0px 0px 40px skyblue);
 }
 
 
 /* Resume Button */
 
-.r_button {
-    height: 80px;
-    width: 80px;
-    background: transparent url(img/document.png);
-    background-position: center;
-    background-size: 100% 100%;
-    border-radius: 25px;
-    opacity: 0.9;
-    border: none;
+.r_button_head:link, 
+.r_button_head:visited,
+.r_button_head {
+    background-color: Transparent;
+    border: 5px solid maroon;
+    border-radius: 50px;
+    color: white;
+    font-size: 150%;
     margin: 40px 0px 0px 0px;
-    transition: 0.3s;
-    transition-delay: 0.3s;
-
+    opacity: 0.9;
+    padding: 10px 30px;
+    text-align: center;
+    transition: 0.7s;
 }
 
-.r_button:hover {
-    background-image: url(img/download.png);
+.r_button_head:hover {
+    background-color: maroon;
     opacity: 1;
-    filter: drop-shadow(4px 4px 5px yellow);
+}
+
+
+
+/*
+================================================================
+                        Section(s)
+================================================================
+*/
+
+section {
+    height: 100vh;
+    background-color: red;
+}
+
+
+
+/*
+================================================================
+                    About Me Section
+================================================================
+*/
+
+.section_about_me {
+    background-color: whitesmoke;
+    color: #181818;
+    font-family: 'Alata', sans-serif;
+    position: relative;
+}
+
+.about_me_title {
+    font-size: 400%;
+    text-align: center;
+    padding-top: 2%;
+    text-decoration: underline maroon;
+    text-underline-position: under;
+}
+
+.about_me_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_me {
+    display: block;
+    width: 30%;
+    height: auto;
+    padding: 0% 5%;
+    border-radius: 100%;
+}
+
+.about_me_text {
+    font-size: 125%;
+    margin-top: 20px;
+    text-align: justify;
+    width: 40%;
+    margin-left: 10%;
+    line-height: 250%;
+}
+
+
+.about_me_text h3{
+    font-size: 180%;
+}
+
+.about_me_text a:link,
+.about_me_text a:visited {
+    color: #646464;
+    transition: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.about_me_text a:hover,
+.about_me_text a:active {
+    color: #b7b7b7;
+}
+
+
+
+/*
+================================================================
+                        Skills Section
+================================================================
+*/
+
+.section_skills {
+    background-color: #181818;
+    color: whitesmoke;
+    font-family: 'Alata', sans-serif;
+    position: relative;
+}
+
+.skills_title {
+    font-size: 400%;
+    text-align: center;
+    padding-top: 2%;
+    text-decoration: underline maroon;
+    text-underline-position: under;
+}
+
+.skills_container {
+    /* display: flex; */
+    height: 100%;
+    padding: 3%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+----------------------------------------------------------------
+                        Tabs Content
+----------------------------------------------------------------
+*/
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.3334%;
+    /* width: 25%; */
+  }
+  
+.tablink:hover {
+    background-color: #777;
+  }
+  
+.tabcontent {
+    color: whitesmoke;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+  
+#languages {background-color: #380000;}
+/* #libraries {background-color: #a0740a;} */
+#technical-skills {background-color: #000033;}
+#tools {background-color: #003300;}
+
+
+/* Languages + Technical Skills + Tools Tab */
+
+.img_block {
+    margin: 0 auto;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.img_skills {
+      height: 120px;
+      width: auto;
+      transition: transform .7s;
+}
+
+.img_skills:hover {
+    transform: scale(1.3);
+}
+
+.column {
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+/* Libraries Tab */
+
+
+/*
+================================================================
+                        Experience Section
+================================================================
+*/
+
+.section_experience {
+    background-color: whitesmoke;
+    color: #181818;
+    font-family: 'Alata', sans-serif;
+    position: relative;
+}
+
+.experience_title {
+    font-size: 400%;
+    text-align: center;
+    padding-top: 2%;
+    text-decoration: underline maroon;
+    text-underline-position: under;
+}
+
+.experience_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp_block {
+    margin: 0 auto;
+    /* padding-top: 0%; */
+    text-align: center;
+}
+
+.exp_block h3 {
+    font-size: 150%;
+    /* border-bottom: 3px solid maroon; */
+    padding-bottom: 1%;
+}
+
+.exp_block h4{
+    color:#808080;
+    font-weight: normal;
+}
+
+.exp_block p {
+    color: #303030;
+    font-size: 100%;
+    padding-left: 17%;
+    padding-right: 17%;
+    line-height: 250%;
+}
+
+
+.img_experience {
+    padding-top: 10%;
+    height: 90px;
+    width: auto;
+    transition: transform .7s;
+}
+
+.img_experience:hover {
+  transform: scale(1.2);
+}
+
+
+
+/*
+================================================================
+                        Projects Section
+================================================================
+*/
+
+.section_projects {
+    background-color: #181818;
+    color: whitesmoke;
+    font-family: 'Alata', sans-serif;
+    position: relative;
+}
+
+.projects_title {
+    font-size: 400%;
+    text-align: center;
+    padding-top: 2%;
+    text-decoration: underline maroon;
+    text-underline-position: under;
+}
+
+.projects_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.proj_block {
+    margin: 0 auto;
+    text-align: center;
+
+    position: relative;
+    height: 90%;
+    /* max-width: 400px; */
+    margin: auto;
+    overflow: hidden;
+    /* padding: 5%; */
+}
+
+.img_project {
+    /* padding-top: 15%; */
+    height: 250px;
+    width: auto;
+    transition: transform .7s;
+}
+
+
+/* STOLEN CONTENTTTTT!!! */
+
+.image_overlay {
+    /* background: rgba(150,0,0,0.7); */
+    background: rgba(0,0,0,0.85);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.proj_block:hover .image_overlay {
+    opacity: 1;
+}
+
+.overlay_content {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.proj_block:hover .overlay_content {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+.fade_in_top {
+    top: 20%;
+}
+
+/* Code Buttons */
+
+.run_code_button {
+    background-color: Transparent;
+    border: 2px solid #888888;
+    border-radius: 10px;
+    color: white;
+    font-size: 100%;
+    margin: 40px 0px 0px 0px;
+    opacity: 0.9;
+    padding: 10px 30px;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.run_code_button:hover {
+    background-color: #888888;
+    opacity: 1;
+}
+
+.run_code_button:disabled {
+    background-color: #696969;
+    border: solid #696969;
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+.view_code_button {
+    background-color: Transparent;
+    border: 2px solid #888888;
+    border-radius: 10px;
+    color: white;
+    font-size: 100%;
+    margin: 10px 0px 0px 0px;
+    opacity: 0.9;
+    padding: 10px 30px;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.view_code_button:hover {
+    background-color: #888888;
+    opacity: 1;
+}
+
+.overlay_content h3 {
+    font-size: 150%;
+    text-decoration: none;
+}
+
+.x_spacer {
+    padding-left: 3%;
+}
+
+.y_spacer {
+    padding-bottom: 2%;
+}
+
+/*
+================================================================
+                            Footer
+================================================================
+*/
+
+footer {
+    background-color:whitesmoke;
+    bottom: 0px;
+    font-family: 'Alata', sans-serif;
+    font-size: 90%;
+    padding: 20px;
+    position: relative;
+    /* width: 100%; */
+}
+
+.footer_navigation a:link, 
+.footer_navigation a:visited {
+    color: #646464;
+    border: 0;
+    float: left;
+    text-decoration: none;
+    margin-right: 15px;
+    -webkit-transition: color 0.7s;
+    transition: color 0.7s;
+}
+
+.footer_navigation a:hover, 
+.footer_navigation a:active {
+    color: #b7b7b7;
+} 
+
+.footer_name {
+    font-family: 'Righteous';
+    font-size: 1rem;
+    margin: 25px 0px 0px 0px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+
+/*
+----------------------------------------------------------------
+                        Footer Buttons
+----------------------------------------------------------------
+*/
+
+.footer_button_container {
+    float: right;
+}
+
+
+/* Github Button */
+
+.g_button_foot {
+    height: 25px;
+    width: 25px;
+    background: transparent url(img/github-b.png);
+    background-size: 100% 100%;
+    border-radius: 7px;
+    opacity: 0.5;
+    border: none;
+    margin: 0px 20px 0px 0px;
+    transition: 0.7s;
+}
+
+.g_button_foot:hover {
+    opacity: 0.2;
+}
+
+
+/* I Button */
+
+.i_button_foot {
+    height: 25px;
+    width: 25px;
+    background: transparent url(img/idea-b.png);
+    background-size: 100% 100%;
+    border-radius: 7px;
+    opacity: 0.5;
+    border: none;
+    margin: 0px 20px 0px 0px;
+    transition: 0.7s;
+}
+
+.i_button_foot:hover {
+    opacity: 0.2;
+}
+
+
+/* LinkedIn Button */
+
+.l_button_foot {
+    height: 25px;
+    width: 25px;
+    background: transparent url(img/linkedin-b.png);
+    background-size: 100% 100%;
+    border-radius: 7px;
+    opacity: 0.5;
+    border: none;
+    margin: 0px 0px 0px 0px;
+    transition: 0.7s;
+}
+
+.l_button_foot:hover {
+    opacity: 0.2;
 }
