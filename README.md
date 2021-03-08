@@ -55,3 +55,10 @@ A history of all the commits made to this repository:
 10. Resume updated
 11. Icons added
 12. Scroll-up Button added
+
+
+
+#### Fourth Commit:
+
+1. About Me section updated
+2. Resume updated
